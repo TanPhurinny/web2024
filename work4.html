@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/etiennepinchon/aframe-fonts/aframe-fonts.min.js"></script>
+  <style>
+    body { margin: 0; }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- Background -->
+    <a-sky src="./img/shot-panoramic-composition-bedroom.jpg" rotation="0 -90 0"></a-sky>
+
+    <!-- Text for Name, ID, and Info -->
+    <a-entity 
+      text="value: Phurin Suwachat ; color: black; align: center;" 
+      position="0 1.5 -3" 
+      scale="2 2 2">
+    </a-entity>
+    <a-entity 
+      text="value: 663380181-3; color: black; align: center;" 
+      position="0 1.2 -3" 
+      scale="2 2 2">
+    </a-entity>
+    <a-entity 
+      text="value: IT; color: black; align: center;" 
+      position="0 0.9 -3" 
+      scale="2 2 2">
+    </a-entity>
+
+    <!-- Model with Animation -->
+    <a-entity 
+      gltf-model="./Man.glb" 
+      animation-mixer="clip:*; loop: repeat;" 
+      scale="1 1 1" 
+      position="-3.442 -1.503 0">
+    </a-entity>
+
+   <!-- Rotating Animation -->
+<a-entity 
+  gltf-model="./Dingus the cat.glb" 
+  position="0 0 -2" 
+  scale="0.3 0.3 0.3"
+  animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
+</a-entity>
+
+  </a-scene>
+</body>
+</html>
